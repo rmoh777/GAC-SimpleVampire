@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Georgia Connects</title>
+    <meta name="description" content="Get in touch with Georgia Connects for assistance with the Lifeline program and affordable connectivity solutions.">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="cfbb47a1-0559-48a4-b3fc-f1867740dbe9";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="header-logo" aria-label="Georgia Connects Home">
+                    <span class="logo-ga">GA</span>
+                    <span class="logo-connects">CONNECTS</span>
+                </a>
+                <ul class="nav-list">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="data.html" class="nav-link">Data</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="nav-list">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="data.html" class="nav-link">Data</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section style="background-color: var(--color-gray-100); padding: var(--spacing-xl) 0;">
+            <div class="container">
+                <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--spacing-sm);">Contact Us</h1>
+                <p style="font-size: var(--font-size-xl); color: var(--color-gray-600);">Get in touch with our team for assistance</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="container" style="margin: var(--spacing-2xl) 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <div class="card">
+                    <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--spacing-md);">Email Us</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">For general inquiries:</p>
+                    <p><a href="mailto:gaconnectsyou@gmail.com" style="color: var(--color-primary); text-decoration: none;">gaconnectsyou@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="container" style="margin: var(--spacing-2xl) 0;">
+            <div class="card">
+                <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
+                <form
+                    action="https://formspree.io/f/xeokokjn"
+                    method="POST"
+                    style="display: flex; flex-direction: column; gap: var(--spacing-md);"
+                >
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                        <label for="name" style="font-weight: 500;">
+                            Name: <span style="color: var(--color-error);">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Enter your name"
+                            style="padding: var(--spacing-sm); border: 2px solid var(--color-gray-300); border-radius: var(--border-radius); font-size: var(--font-size-base); transition: all 0.2s ease; cursor: text;"
+                            onfocus="this.style.borderColor='var(--color-primary)'; this.style.boxShadow='0 0 0 2px rgba(var(--color-primary-rgb), 0.1)'"
+                            onblur="this.style.borderColor='var(--color-gray-300)'; this.style.boxShadow='none'"
+                        >
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                        <label for="email" style="font-weight: 500;">
+                            Email Address: <span style="color: var(--color-error);">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address (e.g., name@domain.com)"
+                            placeholder="Enter your email address"
+                            style="padding: var(--spacing-sm); border: 2px solid var(--color-gray-300); border-radius: var(--border-radius); font-size: var(--font-size-base); transition: all 0.2s ease; cursor: text;"
+                            onfocus="this.style.borderColor='var(--color-primary)'; this.style.boxShadow='0 0 0 2px rgba(var(--color-primary-rgb), 0.1)'"
+                            onblur="this.style.borderColor='var(--color-gray-300)'; this.style.boxShadow='none'"
+                        >
+                        <small style="color: var(--color-gray-600); font-size: var(--font-size-sm);">Please enter a valid email address (required)</small>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                        <label for="message" style="font-weight: 500;">
+                            Comment/Question: <span style="color: var(--color-error);">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required
+                            maxlength="2000"
+                            placeholder="Type your message here..."
+                            style="padding: var(--spacing-sm); border: 2px solid var(--color-gray-300); border-radius: var(--border-radius); font-size: var(--font-size-base); min-height: 150px; resize: vertical; transition: all 0.2s ease; cursor: text;"
+                            onfocus="this.style.borderColor='var(--color-primary)'; this.style.boxShadow='0 0 0 2px rgba(var(--color-primary-rgb), 0.1)'"
+                            onblur="this.style.borderColor='var(--color-gray-300)'; this.style.boxShadow='none'"
+                        ></textarea>
+                        <small style="color: var(--color-gray-600); font-size: var(--font-size-sm);">Maximum 2000 characters</small>
+                        <div id="charCount" style="color: var(--color-gray-600); font-size: var(--font-size-sm); text-align: right;">0/2000 characters</div>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="btn btn--primary"
+                        style="align-self: flex-start; margin-top: var(--spacing-md);"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <h3 class="footer__title">Georgia Connects</h3>
+                    <p>Helping households access affordable connectivity solutions.</p>
+                </div>
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="news.html" class="footer__link">News</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">Contact Us</h3>
+                    <p>Email: gaconnectsyou@gmail.com</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--color-gray-700);">
+                <p>&copy; <span id="copyrightYear">2025</span> Georgia Connects. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Add character counter for the message textarea
+        const messageTextarea = document.getElementById('message');
+        const charCount = document.getElementById('charCount');
+
+        messageTextarea.addEventListener('input', function() {
+            const remaining = this.value.length;
+            charCount.textContent = `${remaining}/2000 characters`;
+            
+            // Change color when approaching limit
+            if (remaining > 1800) {
+                charCount.style.color = 'var(--color-warning)';
+            } else {
+                charCount.style.color = 'var(--color-gray-600)';
+            }
+        });
+
+        // Add email validation
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('input', function() {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(this.value)) {
+                this.setCustomValidity('Please enter a valid email address');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html> 
